@@ -1,0 +1,22 @@
+html
+  head
+    title= title
+  body
+    form(
+      method='post'
+      action='search'
+    )
+      input(
+        type='text'
+        name='search'
+      )
+      button(
+        type='submit'
+      ) SEARCH
+    hr
+    p Search Text: #{searchText}
+    p Search Result
+    each items in words
+      each item, index in items
+        p #{index}: #{item}
+      br
